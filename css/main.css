@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: Arial, Tahoma;
+}
+.product-box,
+.empty-box {
+    width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #dedede;
+    text-align: center;
+}
+.product-box h2 {
+    margin: 0 0 20px;
+    background-color: #de83de;
+    color: white;
+    padding: 10px;
+    width: calc(100% + 80px);
+    position: relative;
+    left: -40px;
+}
+.product-box h2::before,
+.product-box h2::after {
+    content: '';
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    bottom: -20px;
+}
+.product-box h2::before {
+    border-color: #dc18dc #dc18dc transparent transparent;
+    left: 0px;
+}
+.product-box h2::after {
+    border-color: #dc18dc transparent transparent #dc18dc;
+    right: 0;
+}
+.product-box p {
+    line-height: 1.6;
+}
+.empty-box {
+    padding: 0;
+    height: 236px;
+    position: relative;
+}
+.ribbon-one {
+    position: relative;
+}
+.ribbon-one .shape {
+    position: absolute;
+    background-color: #83acde;
+    width: 62px;
+    height: 80px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%);
+    padding-top: 15px;
+    left: 20px;
+    top: -10px;
+}
+.ribbon-one::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #448de5;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    top: -10px;
+    left: 10px;
+}
+.ribbon-two {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.ribbon-two .shape {
+    position: absolute;
+    height: 50px;
+    width: 100px;
+    clip-path: polygon(85% 0, 100% 50%, 85% 100%, 0 100%, 0 0);
+    left: -10px;
+    bottom: 20px;
+    background-color: #83dec9;
+    padding-top: 13px;
+}
+.ribbon-two::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #10a884;
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+    bottom: 10px;
+    left: -10px;
+}
+.ribbon-three {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.ribbon-three .shape {
+    position: absolute;
+    height: 50px;
+    width: 170px;
+    right: -52px;
+    top: 8px;
+    padding-top: 15px;
+    background-color: #efa887;
+    transform: rotate(45deg);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    z-index: 1;
+}
+.ribbon-three::before,
+.ribbon-three::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #be7a5b;
+}
+.ribbon-three::before {
+    top: -20px;
+    right: 100px;    
+    clip-path: polygon(50% 50%, 0% 100%, 100% 100%);
+}
+.ribbon-three::after {
+    top: 100px;
+    right: -20px;
+    clip-path: polygon(50% 50%, 0 0, 0 100%);
+}
+.ribbon-four {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+.ribbon-four .shape {
+    position: absolute;
+    height: 30px;
+    width: 150px;
+    right: -10px;
+    bottom: 30px;
+    background-color: #9f7171;
+    border-radius: 30px 30px 0 30px;
+    padding-top: 5px;
+}
+.ribbon-four::before,
+.ribbon-four::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+}
+.ribbon-four::before {
+    right: -10px;
+    bottom: 10px;    
+    height: 20px;
+    background-color: brown;
+    border-radius: 0px 20px 20px 0px ;
+    z-index: 1;
+}
+.ribbon-four::after {
+    bottom: 22px;
+    height: 10px;
+    background-color: #9f7171;
+}
